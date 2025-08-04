@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnemiaSense</title>
+    <!-- <link rel="stylesheet" href="../static/style.css" />
+    <link rel="shortcut icon" href="../static/img-1.png" type="image/x-icon">  -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img-1.png') }}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div id="container_one">
+      <nav id="navbar">
+        <h1>Anemia</h1>
+        <ul id="list-section">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#container_two">About</a></li>
+          <li><a href="#reports">Reports</a></li>
+          <li><a href="#container_four">Contact</a></li>
+        </ul>
+        <button id="btn-1">
+          <a href="#container_three">Check Now</a>
+        </button>
+      </nav>
+
+      <section id="title-section">
+        <h1>AnemiaSense: Your Health Guardian!</h1>
+        <p>
+          Empowering you with early Detection for better Management & Healthier
+          Living...
+        </p>
+      </section>
+    </div>
+
+    <div id="container_two">
+      <div id="left_container_two">
+        <p>
+          Anemia is a condition where the blood has a lower than normal number
+          of red blood cells, or the red blood cells don't contain enough
+          hemoglobin, which carries oxygen. This can lead to various symptoms
+          like fatigue, weakness, and shortness of breath, as the body's tissues
+          aren't getting enough oxygen. It's a common condition with a wide
+          range of causes, including iron deficiency, vitamin deficiencies,
+          chronic diseases, and blood loss.
+        </p>
+        <button id="btn-2">
+          <a href="https://en.wikipedia.org/wiki/Anemia">Read More ...</a>
+        </button>
+      </div>
+      <div id="right_container_two">
+        <div class="right_container_boxes">
+          <a href="https://en.wikipedia.org/wiki/Hemoglobin"
+            ><img
+              src="{{ url_for('static', filename='icon-1.png') }}"
+              alt="logo_1"
+            />
+          </a>
+          <h3>haemoglobin.</h3>
+          <p>
+            It is a protein that is crucial for carrying oxygen from the lungs
+            to the rest of the body and transporting carbon dioxide back to the
+            lungs.
+          </p>
+        </div>
+        <div class="right_container_boxes">
+          <a href="https://en.wikipedia.org/wiki/Mean_corpuscular_volume"
+            ><img
+              src="{{ url_for('static', filename='icon-3.png') }}"
+              alt="logo_3"
+            />
+          </a>
+          <h3>mcv.</h3>
+          <p>
+            It is a blood test that measures the average size of your red blood
+            cells.
+          </p>
+        </div>
+        <div class="right_container_boxes">
+          <a href="https://en.wikipedia.org/wiki/Mean_corpuscular_hemoglobin"
+            ><img
+              src="{{ url_for('static', filename='icon-4.png') }}"
+              alt="logo_4"
+            />
+          </a>
+          <h3>mch.</h3>
+          <p>
+            It is a blood test that measures the average amount of hemoglobin in
+            a red blood cell.
+          </p>
+        </div>
+        <div class="right_container_boxes">
+          <a
+            href="https://en.wikipedia.org/wiki/Mean_corpuscular_hemoglobin_concentration"
+            ><img
+              src="{{ url_for('static', filename='icon-2.png') }}"
+              alt="logo_2"
+            />
+          </a>
+          <h3>mchc.</h3>
+          <p>
+            It is a blood test that measures the average concentration of
+            hemoglobin within a single red blood cell.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="container_three">
+      <div id="form_container_three">
+        <div id="background-image"></div>
+        <form action="#" method="POST" id="predict-form">
+          <h3 id="form-title">Your Details Please!</h3>
+          <br /><br />
+
+          <div class="form-group">
+            <label for="name">Enter Your Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="------------------- Your Full Name ---------------------"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Enter Your Age:</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="-----------------------  Your Age ---------------------"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Enter Your Sex:</label>
+            <input
+              type="number"
+              id="sex"
+              name="Gender"
+              placeholder="------------------- Male:0 & Female:1 ---------------------"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your MCV. Count: </label>
+            <input
+              type="text"
+              id="mcv"
+              name="MCV"
+              placeholder="------------------- Between 70 - 100 ---------------------"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your MCH. Count: </label>
+            <input
+              type="text"
+              id="mch"
+              name="MCH"
+              placeholder="------------------- Between 16 - 30 ---------------------"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your MCHC. Count: </label>
+            <input
+              type="text"
+              id="mchc"
+              name="MCHC"
+              placeholder="------------------- Between 28 - 34 ---------------------"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Your HAEMO. Count: </label>
+            <input
+              type="text"
+              id="haemo"
+              name="Hemoglobin"
+              placeholder="------------------- Between 7 - 15 ---------------------"
+              required
+            />
+          </div>
+
+          <button id="btn-3" type="submit">
+            <a href="#container_four"></a>Predict
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="container_four">
+      <div id="top_container_four">
+        <img
+          src="https://www.scleroderma.org.au/uploads/1/3/3/1/133121601/anaemia_orig.jpg"
+          alt=""
+        />
+        <div id="prediction-result"></div>
+      </div>
+
+      <div id="bottom_container_four">
+        <div>
+          <h2>Contact Us:</h2>
+        </div>
+        <div>
+          <p>The Smart Bridge</p>
+          <p>Hyderabad, Telangana, India</p>
+        </div>
+        <div>
+          <p><strong>Phone:</strong> <span>+91-8070XXXXXX</span></p>
+          <br />
+          <p><strong>E-Mail:</strong> <span>info@support@mailxyz.com</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("predict-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = new FormData(this);
+
+          fetch("/predict", {
+            method: "POST",
+            body: formData,
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              const resultDiv = document.getElementById("prediction-result");
+
+              if (data.result && data.result.trim() !== "") {
+                resultDiv.innerText = data.result;
+                resultDiv.style.display = "block"; // Only show if content is valid
+                document
+                  .getElementById("container_four")
+                  .scrollIntoView({ behavior: "smooth" });
+              } else {
+                resultDiv.innerText = "";
+                resultDiv.style.display = "none";
+              }
+
+              setTimeout(() => {
+                document.getElementById("predict-form").reset();
+                container.style.opacity = "1"; // Optional: restore opacity after reset
+              }, 1000);
+
+              const container = document.getElementById("background-image");
+              if (container) container.style.opacity = "0.1";
+            });
+        });
+    </script>
+  </body>
+</html>
