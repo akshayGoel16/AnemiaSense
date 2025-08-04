@@ -11,7 +11,10 @@ Built with Flask for lightweight deployment
 Visualizations for data insights
 
 #Machine Learning:
+
 Model Used: Decision Tree Classifier (Scikit-learn)
+
 Data Processing: Handled using Pandas and NumPy
+
 Evaluation & Visualization: Matplotlib and Seaborn
 
