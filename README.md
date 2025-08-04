@@ -31,12 +31,11 @@
 
 The dataset used contains the following medical features:
 
-* `Age`
+* `Gender`
 * `Hemoglobin`
 * `MCV` (Mean Corpuscular Volume)
 * `MCH` (Mean Corpuscular Hemoglobin)
 * `MCHC` (Mean Corpuscular Hemoglobin Concentration)
-* `RBC Count`
 
 ---
 
@@ -48,7 +47,3 @@ The dataset used contains the following medical features:
 4. The result is instantly displayed on the same page
 5. Background opacity is adjusted and the form resets automatically
 
----
-
-
-Let me know if you want this in `.md` file format or want to include screenshots, GitHub badge, or deployment instructions (like Render, Railway, etc.).
